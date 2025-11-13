@@ -1,0 +1,145 @@
+{
+  "rol": [
+    {
+      "id": "1a2b3c",
+      "nombre": "Cliente",
+      "descripcion": "Usuario con acceso a cuentas personales"
+    },
+    {
+      "id": "4d5e6f",
+      "nombre": "Administrador",
+      "descripcion": "Usuario con acceso total al sistema"
+    }
+  ],
+  "tipo_identificacion": [
+    {
+      "id": "11",
+      "nombre": "Cédula Nacional",
+      "descripcion": "Documento de identidad costarricense"
+    },
+    {
+      "id": "22",
+      "nombre": "Pasaporte",
+      "descripcion": "Documento de identidad internacional"
+    }
+  ],
+  "tipo_cuenta": [
+    {
+      "id": "aa",
+      "nombre": "Ahorros",
+      "descripcion": "Cuenta de ahorro personal"
+    },
+    {
+      "id": "bb",
+      "nombre": "Corriente",
+      "descripcion": "Cuenta corriente con chequera"
+    }
+  ],
+  "tipo_tarjeta": [
+    {
+      "id": "cc",
+      "nombre": "Débito",
+      "descripcion": "Tarjeta asociada a cuenta bancaria"
+    },
+    {
+      "id": "dd",
+      "nombre": "Crédito",
+      "descripcion": "Tarjeta con límite de crédito"
+    }
+  ],
+  "moneda": [
+    { "id": "m1", "nombre": "Colón costarricense", "iso": "CRC" },
+    { "id": "m2", "nombre": "Dólar estadounidense", "iso": "USD" }
+  ],
+  "estado_cuenta": [
+    {
+      "id": "e1",
+      "nombre": "Activa",
+      "descripcion": "Cuenta disponible para operaciones"
+    },
+    {
+      "id": "e2",
+      "nombre": "Bloqueada",
+      "descripcion": "Cuenta temporalmente suspendida"
+    }
+  ],
+  "usuario": [
+    {
+      "id": "u1",
+      "tipo_identificacion": "11",
+      "identificacion": "123456789",
+      "nombre": "Ana",
+      "apellido": "Pérez",
+      "correo": "ana.perez@bancoxyz.com",
+      "telefono": "8888-1234",
+      "usuario": "anaperez",
+      "rol": "1a2b3c"
+    },
+    {
+      "id": "u2",
+      "tipo_identificacion": "11",
+      "identificacion": "987654321",
+      "nombre": "Carlos",
+      "apellido": "Jiménez",
+      "correo": "carlos.jimenez@bancoxyz.com",
+      "telefono": "8999-5678",
+      "usuario": "carlosj",
+      "rol": "1a2b3c"
+    }
+  ],
+  "cuenta": [
+    {
+      "id": "c1",
+      "usuario_id": "u1",
+      "iban": "CR23012345678901234567",
+      "alias": "Cuenta Principal",
+      "tipo_cuenta": "aa",
+      "moneda": "m1",
+      "saldo": 152340.5,
+      "estado": "e1"
+    },
+    {
+      "id": "c2",
+      "usuario_id": "u2",
+      "iban": "CR73098765432109876543",
+      "alias": "Cuenta Dólares",
+      "tipo_cuenta": "bb",
+      "moneda": "m2",
+      "saldo": 2500,
+      "estado": "e1"
+    }
+  ],
+  "tarjeta": [
+    {
+      "id": "t1",
+      "usuario_id": "u1",
+      "tipo": "cc",
+      "numero_enmascarado": "**** **** **** 4321",
+      "fecha_expiracion": "07/28",
+      "moneda": "m1",
+      "limite_credito": 0,
+      "saldo_actual": 48000
+    },
+    {
+      "id": "t2",
+      "usuario_id": "u2",
+      "tipo": "dd",
+      "numero_enmascarado": "**** **** **** 9876",
+      "fecha_expiracion": "05/27",
+      "moneda": "m2",
+      "limite_credito": 1500000,
+      "saldo_actual": 500000
+    }
+  ],
+  "transferencia": [
+    {
+      "id": "tr1",
+      "cuenta_origen": "c1",
+      "cuenta_destino": "c2",
+      "moneda": "m1",
+      "monto": 25000,
+      "descripcion": "Pago de servicios",
+      "fecha_transferencia": "2025-11-07"
+    }
+  ]
+}
